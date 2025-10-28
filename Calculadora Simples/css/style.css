@@ -1,0 +1,104 @@
+/* Configuração global para um box-model mais fácil */
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    /* Centraliza a calculadora na tela */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0; /* Um fundo cinza claro */
+}
+
+/* O contêiner principal */
+.calculator-container {
+    background-color: #333; /* Tema escuro para a calculadora */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+
+    /* Responsividade: define um tamanho máximo, mas permite encolher */
+    max-width: 400px;
+    width: 90vw; /* Ocupa 90% da largura da tela em dispositivos móveis */
+}
+
+/* O grid dos botões */
+.buttons-grid {
+    display: grid;
+    /* Cria 4 colunas de tamanho igual */
+    grid-template-columns: repeat(4, 1fr);
+    /* Espaçamento entre os botões */
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Estilo padrão de todos os botões */
+.buttons-grid button {
+    cursor: pointer;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #eee;
+    transition: background-color 0.2s;
+}
+
+.buttons-grid button:hover {
+    background-color: #fff;
+}
+
+/* Classe para botões que ocupam duas colunas */
+.span-two {
+    grid-column: span 2;
+}
+
+/* Estilos específicos para botões de operação */
+[data-operation],
+[data-equals] {
+    background-color: #f0a030; /* Laranja */
+    color: rgb(3, 2, 2);
+}
+[data-operation]:hover,
+[data-equals]:hover {
+    background-color: #f0a030;
+    opacity: 0.9;
+}
+
+/* Estilos para botões de função (AC, DEL) */
+[data-all-clear],
+[data-delete] {
+    background-color: #b0b0b0; /* Cinza claro */
+}
+[data-all-clear]:hover,
+[data-delete]:hover {
+    background-color: #b0b0b0;
+    opacity: 0.9;
+}
+
+
+/* Estilização do visor */
+.display {
+    background-color: #222;
+    color: white;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: right;
+    word-wrap: break-word; /* Quebra a linha se o número for muito grande */
+    word-break: break-all;
+}
+
+.previous-operand {
+    min-height: 32px;
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.7); /* Cor mais suave para o número de cima */
+}
+
+.current-operand {
+    font-size: 2.5rem;
+}
