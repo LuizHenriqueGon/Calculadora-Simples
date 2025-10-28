@@ -34,7 +34,7 @@ Como este é um projeto puramente frontend (HTML/CSS/JS), não há necessidade d
 
 1.  Clone este repositório:
     ```bash
-    git clone [https://github.com/SEU-USUARIO/calculadora-simples.git](https://github.com/SEU-USUARIO/calculadora-simples.git)
+    git clone https://github.com/LuizHenriqueGon/calculadora-simples.git
     ```
 2.  Navegue até a pasta do projeto:
     ```bash
