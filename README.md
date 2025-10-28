@@ -4,7 +4,6 @@ Uma calculadora web básica desenvolvida como um projeto de estudo para praticar
 
 <img width="517" height="697" alt="image" src="https://github.com/user-attachments/assets/5128e09b-6e71-473c-b68f-6b51c5dd6f9a" />
 
-*(Recomendação: Tire um print da sua calculadora pronta, coloque na pasta do projeto com o nome `preview.png` e suba para o GitHub para que essa imagem apareça aqui)*
 
 ---
 
